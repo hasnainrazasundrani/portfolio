@@ -996,25 +996,6 @@ const projectData = {
       });
     });
   });
-
-  var form = document.getElementById('contactForm'), msg = document.getElementById('formMsg'), sendBtn = document.getElementById('sendBtn');
-  form.addEventListener('submit', function(e){
-    if(form.action.indexOf('YOUR_FORM_ID') !== -1){
-      e.preventDefault();
-      msg.className = 'form-msg err';
-      msg.textContent = 'Form not configured yet. Please email me directly at sundranihasnain@gmail.com.';
-      return;
-    }
-    e.preventDefault();
-    sendBtn.disabled = true; sendBtn.textContent = 'Sending...';
-    fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
-      .then(function(r){
-        if(r.ok){ msg.className='form-msg ok'; msg.textContent='Thanks! Your message has been sent.'; form.reset(); }
-        else { throw new Error(); }
-      })
-      .catch(function(){ msg.className='form-msg err'; msg.textContent='Something went wrong. Please email me directly instead.'; })
-      .finally(function(){ sendBtn.disabled=false; sendBtn.textContent='Send message'; });
-  });
 })();
 </script>
 
@@ -1044,14 +1025,34 @@ const projectData = {
       </div>
 
       <!-- Replace YOUR_FORM_ID with your Formspree form ID (https://formspree.io) -->
-      <form id="contactForm" class="reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
-        <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
-        <div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
-        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn primary" type="submit" id="sendBtn">Send message</button>
-        <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
-      </form>
+      <form id="contactForm" class="reveal"
+      action="https://formspree.io/f/xkjrpjzy"
+      method="POST"
+      novalidate>
+  <div>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required autocomplete="name">
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required autocomplete="email">
+  </div>
+  <div>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required></textarea>
+  </div>
+
+  <!-- Formspree special fields -->
+  <input type="hidden" name="_subject" value="New message from hasnain.dev">
+  <input type="hidden" name="_replyto" id="replyto" value="">
+
+  <!-- Honeypot (Formspree treats _gotcha as spam) -->
+  <input class="hp" type="text" name="_gotcha" tabindex="-1"
+         autocomplete="off" aria-hidden="true">
+
+  <button class="btn primary" type="submit" id="sendBtn">Send message</button>
+  <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+</form>
     </div>
   </div>
 </section>
@@ -1116,25 +1117,69 @@ const projectData = {
     });
   });
 
-  // contact form (Formspree, AJAX)
-  var form = document.getElementById('contactForm'), msg = document.getElementById('formMsg'), sendBtn = document.getElementById('sendBtn');
-  form.addEventListener('submit', function(e){
-    if(form.action.indexOf('YOUR_FORM_ID') !== -1){
-      e.preventDefault();
+  var form    = document.getElementById('contactForm');
+var msg     = document.getElementById('formMsg');
+var sendBtn = document.getElementById('sendBtn');
+var emailEl = document.getElementById('email');
+var replyto = document.getElementById('replyto');
+
+// Keep _replyto in sync so Formspree can reply directly to the sender
+emailEl.addEventListener('input', function () {
+  replyto.value = emailEl.value;
+});
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Simple client-side validation fallback (we removed `required` via novalidate)
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
+  msg.className = 'form-msg';
+  msg.textContent = '';
+  sendBtn.disabled = true;
+  var originalLabel = sendBtn.textContent;
+  sendBtn.textContent = 'Sending...';
+
+  var controller = new AbortController();
+  var timeout = setTimeout(function () { controller.abort(); }, 15000);
+
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' },
+    signal: controller.signal
+  })
+    .then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (body) {
+        if (r.ok) return body;
+        // Formspree returns { errors: [{ field, message }, …] } on failure
+        var detail = (body.errors || [])
+          .map(function (x) { return x.field ? (x.field + ': ' + x.message) : x.message; })
+          .join(' · ');
+        throw new Error(detail || ('HTTP ' + r.status));
+      });
+    })
+    .then(function () {
+      msg.className = 'form-msg ok';
+      msg.textContent = 'Thanks! Your message has been sent — I\'ll reply soon.';
+      form.reset();
+      replyto.value = '';
+    })
+    .catch(function (err) {
       msg.className = 'form-msg err';
-      msg.textContent = 'Form not configured yet. Please email me directly at sundranihasnain@gmail.com.';
-      return;
-    }
-    e.preventDefault();
-    sendBtn.disabled = true; sendBtn.textContent = 'Sending...';
-    fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
-      .then(function(r){
-        if(r.ok){ msg.className='form-msg ok'; msg.textContent='Thanks! Your message has been sent.'; form.reset(); }
-        else { throw new Error(); }
-      })
-      .catch(function(){ msg.className='form-msg err'; msg.textContent='Something went wrong. Please email me directly instead.'; })
-      .finally(function(){ sendBtn.disabled=false; sendBtn.textContent='Send message'; });
-  });
+      msg.textContent = err.name === 'AbortError'
+        ? 'Request timed out. Please try again or email me directly.'
+        : 'Could not send: ' + err.message + '. You can also email sundranihasnain@gmail.com.';
+    })
+    .finally(function () {
+      clearTimeout(timeout);
+      sendBtn.disabled = false;
+      sendBtn.textContent = originalLabel;
+    });
+});
 })();
 </script>
 </body>
