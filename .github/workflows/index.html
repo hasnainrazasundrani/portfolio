@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hasnain Raza Sundrani | Senior Full-Stack Developer</title>
+<meta name="description" content="Senior full-stack developer (Laravel, PHP, WordPress, Magento 2, React, Next.js, Node.js) based in Ahmedabad, India. 5+ years, 15+ client projects, 95% on-time delivery.">
+<meta property="og:title" content="Hasnain Raza Sundrani | Senior Full-Stack Developer">
+<meta property="og:description" content="Laravel, PHP, WordPress, Magento 2, React.js, Next.js, Node.js. 15+ client projects delivered.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0f17; --bg2:#101624; --card:#131a2a; --line:#1f2a40;
+  --text:#e6ebf5; --muted:#93a0b8; --accent:#38bdf8; --accent2:#818cf8;
+  --radius:14px; --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+.mono{font-family:'JetBrains Mono',monospace}
+.eyebrow{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:.85rem;margin-bottom:8px;display:block}
+h2.title{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+.sub{color:var(--muted);max-width:640px;margin-bottom:40px}
+.grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,15,23,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;letter-spacing:-.02em}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:26px;align-items:center}
+.links a{color:var(--muted);font-size:.92rem;font-weight:500;transition:.2s}
+.links a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-weight:600;font-size:.92rem;border:1px solid var(--line);transition:.2s;cursor:pointer;background:transparent;color:var(--text);font-family:inherit}
+.btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#06101c;border:none}
+.btn.primary:hover{box-shadow:0 8px 28px rgba(56,189,248,.28)}
+.burger{display:none;background:none;border:0;color:var(--text);font-size:1.6rem;cursor:pointer}
+
+/* HERO */
+.hero{padding-top:150px;padding-bottom:70px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:560px;height:560px;right:-140px;top:-60px;background:radial-gradient(circle,rgba(129,140,248,.22),transparent 65%);pointer-events:none}
+.hero::after{content:"";position:absolute;width:480px;height:480px;left:-160px;bottom:-200px;background:radial-gradient(circle,rgba(56,189,248,.14),transparent 65%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:48px;align-items:center;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg2);padding:6px 14px;border-radius:99px;font-size:.82rem;color:var(--muted);margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
+.hero h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;margin-bottom:16px}
+.role{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);margin-bottom:22px}
+.role b{color:var(--text);font-weight:600}
+.hero p.lead{color:var(--muted);max-width:600px;margin-bottom:30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.social{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+.social a:hover{color:var(--accent)}
+.avatar-wrap{display:flex;justify-content:center}
+.avatar{width:240px;height:240px;border-radius:50%;display:grid;place-items:center;font-size:4.2rem;font-weight:800;letter-spacing:-.04em;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06101c;box-shadow:0 0 0 10px rgba(56,189,248,.08),0 0 0 22px rgba(129,140,248,.05),0 30px 80px rgba(56,189,248,.18)}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-10px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;text-align:center}
+.stat .n{font-size:2.2rem;font-weight:800;letter-spacing:-.03em}
+.stat .l{color:var(--muted);font-size:.88rem}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+.about-grid p{color:var(--muted);margin-bottom:16px}
+.about-grid p b{color:var(--text)}
+.facts{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.facts li{list-style:none;display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:.92rem}
+.facts li:last-child{border:0}
+.facts li span:first-child{color:var(--muted)}
+.facts li span:last-child{text-align:right;font-weight:500}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skill-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:.25s}
+.skill-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.skill-card h3{font-size:1rem;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.skill-card h3 i{font-style:normal;font-size:1.2rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-family:'JetBrains Mono',monospace;font-size:.76rem;background:var(--bg2);border:1px solid var(--line);color:#c6d2ea;padding:4px 10px;border-radius:7px}
+
+/* AI */
+.ai{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.ai-tools{display:flex;flex-direction:column;gap:14px}
+.ai-group{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.ai-group h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px;font-weight:600}
+.workflow{display:flex;flex-direction:column;gap:14px}
+.step{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.step .num{flex:none;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06101c;font-family:'JetBrains Mono',monospace}
+.step h4{font-size:1rem;margin-bottom:2px}
+.step p{color:var(--muted);font-size:.9rem}
+
+/* EXPERIENCE */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.job{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:22px}
+.job::before{content:"";position:absolute;left:-28px;top:32px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.job-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 16px;margin-bottom:12px}
+.job h3{font-size:1.15rem}
+.job .co{color:var(--accent);font-weight:500;font-size:.95rem}
+.job .when{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--muted);align-self:center}
+.job ul{padding-left:18px;color:var(--muted);font-size:.94rem}
+.job li{margin-bottom:6px}
+.job li b{color:var(--text);font-weight:600}
+
+/* PROJECTS */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.filter{background:var(--card);border:1px solid var(--line);color:var(--muted);padding:8px 18px;border-radius:99px;font-size:.88rem;font-weight:500;cursor:pointer;transition:.2s;font-family:inherit}
+.filter:hover{color:var(--text)}
+.filter.active{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#06101c;border-color:transparent;font-weight:600}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:12px;transition:.25s;position:relative;overflow:hidden}
+.proj::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--c,var(--accent))}
+.proj:hover{transform:translateY(-4px);border-color:var(--c,var(--accent))}
+.proj.hide{display:none}
+.proj-top{display:flex;justify-content:space-between;align-items:center}
+.cat{font-family:'JetBrains Mono',monospace;font-size:.72rem;padding:3px 10px;border-radius:6px;background:var(--bg2);color:var(--c,var(--accent));border:1px solid var(--line)}
+.arrow{color:var(--muted);transition:.2s}
+.proj:hover .arrow{color:var(--c,var(--accent));transform:translate(3px,-3px)}
+.proj h3{font-size:1.1rem;word-break:break-word}
+.proj p{color:var(--muted);font-size:.9rem;flex:1}
+.proj .host{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--muted)}
+.note{margin-top:22px;color:var(--muted);font-size:.85rem}
+
+/* EDUCATION */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.edu{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.edu .deg{font-size:1.05rem;font-weight:700;margin-bottom:4px}
+.edu .uni{color:var(--muted);font-size:.92rem}
+.edu .ic{font-size:1.6rem;margin-bottom:10px}
+
+/* CONTACT */
+.contact{background:var(--bg2);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.c-list{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.c-item{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;transition:.2s}
+.c-item:hover{border-color:var(--accent)}
+.c-item .ci{font-size:1.3rem}
+.c-item small{display:block;color:var(--muted);font-size:.78rem}
+form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:grid;gap:14px}
+label{font-size:.84rem;color:var(--muted);display:block;margin-bottom:6px}
+input,textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:12px 14px;font:inherit;font-size:.94rem;transition:.2s}
+input:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(56,189,248,.15)}
+textarea{min-height:130px;resize:vertical}
+.form-msg{font-size:.9rem;min-height:1.2em}
+.form-msg.ok{color:#22c55e}.form-msg.err{color:#f87171}
+.hp{position:absolute;left:-9999px}
+
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;text-align:center}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:960px){
+  .hero-grid,.about-grid,.ai-grid,.contact-grid{grid-template-columns:1fr}
+  .skills-grid,.proj-grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .avatar-wrap{order:-1;justify-content:flex-start}
+  .avatar{width:150px;height:150px;font-size:2.6rem}
+}
+@media (max-width:680px){
+  section{padding:64px 0}
+  .skills-grid,.proj-grid,.edu-grid{grid-template-columns:1fr}
+  .burger{display:block}
+  .links{position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 20px 16px;display:none}
+  .links.open{display:flex}
+  .links a{padding:12px 0;width:100%}
+}
+
+/* PROJECT MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 10, 18, 0.82);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+.modal {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: translateY(18px) scale(0.98);
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+}
+.modal-overlay.open .modal {
+  transform: translateY(0) scale(1);
+}
+.modal-close {
+  position: sticky;
+  top: 12px;
+  float: right;
+  margin: 12px 12px 0 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--bg2);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.2s;
+  z-index: 2;
+}
+.modal-close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.modal-body {
+  padding: 28px 32px 36px;
+}
+.modal-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  display: block;
+}
+.modal-body h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+.modal-live-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--accent);
+  margin-bottom: 22px;
+}
+.modal-live-link:hover {
+  text-decoration: underline;
+}
+.modal-section {
+  margin-bottom: 22px;
+}
+.modal-section h4 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.modal-section p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+.modal-roles {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+.modal-roles li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--text);
+  font-size: 0.92rem;
+}
+.modal-roles li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.modal-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+.modal-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+@media (max-width: 680px) {
+  .modal-body { padding: 24px 20px 32px; }
+  .modal-body h2 { font-size: 1.35rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-in">
+    <a href="#home" class="logo">hasnain<span>.dev</span></a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div class="links" id="links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#ai">AI Workflow</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="btn primary" href="resume.pdf" download>Resume ↓</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge"><span class="dot"></span> Immediate joiner · Open to full-time, contract &amp; remote</div>
+      <h1>Hi, I'm <span class="grad">Hasnain Raza Sundrani</span></h1>
+      <p class="role"><b>Senior Full-Stack Developer</b> · Laravel · PHP · WordPress · React.js · Next.js · Node.js</p>
+      <p class="lead">I build and ship production web applications: REST APIs, payment integrations, e-commerce stores and fast, reliable back ends. 5+ years on Laravel, PHP, WordPress and Magento 2, plus 2 years on the modern JavaScript stack.</p>
+      <div class="cta">
+        <a href="#projects" class="btn primary">View my work →</a>
+        <a href="#contact" class="btn">Get in touch</a>
+        <a href="resume.pdf" class="btn" download>Download resume</a>
+      </div>
+      <div class="social mono">
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="mailto:sundranihasnain@gmail.com">sundranihasnain@gmail.com</a>
+      </div>
+    </div>
+    <div class="avatar-wrap reveal"><div class="avatar" aria-hidden="true">HS</div></div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="stats reveal">
+    <div class="stat"><div class="n grad" data-count="5" data-suffix="+">0</div><div class="l">Years of experience</div></div>
+    <div class="stat"><div class="n grad" data-count="15" data-suffix="+">0</div><div class="l">Client projects delivered</div></div>
+    <div class="stat"><div class="n grad" data-count="95" data-suffix="%">0</div><div class="l">On-time delivery rate</div></div>
+    <div class="stat"><div class="n grad" data-count="60" data-suffix="%">0</div><div class="l">Faster SQL queries (up to)</div></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container">
+    <span class="eyebrow">// about</span>
+    <h2 class="title">Owning features from requirements to release</h2>
+    <div class="about-grid">
+      <div class="reveal">
+        <p>I'm a senior full-stack developer based in <b>Ahmedabad, India</b>, with <b>5+ years</b> building and supporting production web applications on <b>Laravel, Core PHP, WordPress and Magento 2</b>, and <b>2 years</b> on <b>React.js, Next.js, Vue.js, Node.js and MongoDB</b>.</p>
+        <p>I've delivered <b>15+ client projects with a 95% on-time delivery rate</b>. I own work end to end: REST API design, payment gateway and third-party integrations, MySQL performance tuning and Linux deployment.</p>
+        <p>I lead modules, review code and mentor junior developers. I also use AI coding tools (Claude Code, Cursor, Windsurf, Google Antigravity) to move faster on development, debugging and refactoring, while keeping code review standards high.</p>
+      </div>
+      <ul class="facts reveal">
+        <li><span>Location</span><span>Ahmedabad, Gujarat, India</span></li>
+        <li><span>Role</span><span>Senior Full-Stack Developer</span></li>
+        <li><span>Education</span><span>MCA · BCA</span></li>
+        <li><span>Availability</span><span>Immediate joiner</span></li>
+        <li><span>Open to</span><span>Full-time · Contract · Remote</span></li>
+        <li><span>Preferred cities</span><span>Ahmedabad · Mumbai · Pune</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="padding-top:0">
+  <div class="container">
+    <span class="eyebrow">// skills</span>
+    <h2 class="title">Technical skills</h2>
+    <p class="sub">A back-end-first stack with solid front-end and DevOps coverage.</p>
+    <div class="skills-grid">
+      <div class="skill-card reveal"><h3><i>⚙️</i> Backend</h3><div class="tags">
+        <span class="tag">PHP (5+ yrs)</span><span class="tag">Laravel (5+ yrs)</span><span class="tag">Core PHP</span><span class="tag">Node.js (2 yrs)</span><span class="tag">Eloquent ORM</span><span class="tag">Queues</span><span class="tag">Jobs</span><span class="tag">Events</span><span class="tag">Scheduler</span><span class="tag">MVC</span><span class="tag">OOP</span><span class="tag">Composer</span></div></div>
+      <div class="skill-card reveal"><h3><i>🎨</i> Frontend</h3><div class="tags">
+        <span class="tag">React.js (2 yrs)</span><span class="tag">Next.js (2 yrs)</span><span class="tag">Vue.js</span><span class="tag">JavaScript ES6+</span><span class="tag">jQuery</span><span class="tag">AJAX</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span><span class="tag">Responsive Design</span></div></div>
+      <div class="skill-card reveal"><h3><i>🛒</i> CMS &amp; E-commerce</h3><div class="tags">
+        <span class="tag">WordPress</span><span class="tag">Custom themes</span><span class="tag">Plugins</span><span class="tag">Page builders</span><span class="tag">Performance &amp; security</span><span class="tag">Magento 2</span><span class="tag">PrestaShop</span></div></div>
+      <div class="skill-card reveal"><h3><i>🔌</i> APIs &amp; Integrations</h3><div class="tags">
+        <span class="tag">REST API design</span><span class="tag">API authentication</span><span class="tag">Payment gateways</span><span class="tag">Third-party integrations</span></div></div>
+      <div class="skill-card reveal"><h3><i>🗄️</i> Databases</h3><div class="tags">
+        <span class="tag">MySQL</span><span class="tag">Schema design</span><span class="tag">Indexing</span><span class="tag">Query optimization</span><span class="tag">MongoDB (2 yrs)</span></div></div>
+      <div class="skill-card reveal"><h3><i>🚀</i> DevOps &amp; Servers</h3><div class="tags">
+        <span class="tag">Linux</span><span class="tag">Apache</span><span class="tag">Nginx</span><span class="tag">Plesk</span><span class="tag">SSL</span><span class="tag">DNS</span><span class="tag">Server migrations</span><span class="tag">Git / GitHub</span><span class="tag">CI/CD</span><span class="tag">FTP/SSH deploys</span></div></div>
+    </div>
+    <div class="skill-card reveal" style="margin-top:18px"><h3><i>🧩</i> Additional</h3><div class="tags">
+      <span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">Selenium</span><span class="tag">BeautifulSoup</span><span class="tag">FastAPI</span><span class="tag">Tailscale</span><span class="tag">ngrok</span><span class="tag">Hugging Face Spaces</span></div></div>
+  </div>
+</section>
+
+<section id="ai" class="ai">
+  <div class="container">
+    <span class="eyebrow">// ai-assisted development</span>
+    <h2 class="title">AI-assisted, human-reviewed</h2>
+    <p class="sub">I use AI tools to speed up the routine parts of development and keep my own judgment and review standards on everything that ships.</p>
+    <div class="ai-grid">
+      <div class="ai-tools reveal">
+        <div class="ai-group"><h4>AI coding agents &amp; IDEs</h4><div class="tags"><span class="tag">Claude Code</span><span class="tag">Cursor</span><span class="tag">Windsurf</span><span class="tag">Google Antigravity</span></div></div>
+        <div class="ai-group"><h4>CLI agents</h4><div class="tags"><span class="tag">Gemini CLI</span><span class="tag">Codex CLI</span></div></div>
+        <div class="ai-group"><h4>AI assistants</h4><div class="tags"><span class="tag">Claude</span><span class="tag">ChatGPT</span><span class="tag">Gemini</span></div></div>
+      </div>
+      <div class="workflow reveal">
+        <div class="step"><div class="num">01</div><div><h4>Build</h4><p>Scaffold Laravel modules, REST endpoints, migrations and React/Next.js components from a clear spec, then refine by hand.</p></div></div>
+        <div class="step"><div class="num">02</div><div><h4>Debug</h4><p>Trace production errors, slow queries and failing jobs using logs and stack traces, and verify every fix locally.</p></div></div>
+        <div class="step"><div class="num">03</div><div><h4>Refactor &amp; review</h4><p>Modernize legacy PHP, extract reusable services, draft PR summaries and API docs, then edit for accuracy.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <span class="eyebrow">// experience</span>
+    <h2 class="title">Where I've worked</h2>
+    <p class="sub">From PHP intern to senior developer leading modules and mentoring teammates.</p>
+    <div class="timeline">
+
+      <article class="job reveal">
+        <div class="job-head"><div><h3>Senior PHP Developer</h3><div class="co">Actowiz Solutions · Ahmedabad</div></div><div class="when">Jul 2025 – Sep 2026</div></div>
+        <ul>
+          <li>Led backend development of scalable <b>Laravel and Core PHP</b> applications on MySQL, owning each feature from requirements through production release and post-launch support.</li>
+          <li>Designed and built <b>REST APIs</b> that power internal dashboards and client-facing applications, consumed by React.js and JavaScript front ends.</li>
+          <li>Deployed releases to <b>Linux production servers</b> (Apache, Nginx, Plesk) with no downtime for live sites during updates.</li>
+          <li>Managed <b>SSL certificates, DNS configuration and server migrations</b> across multiple production sites.</li>
+          <li>Diagnosed production issues and tuned performance on live Laravel, PHP and WordPress sites, reducing recurring incidents.</li>
+          <li>Reviewed code, guided junior developers on Laravel best practices, and took ownership of modules from planning to delivery.</li>
+          <li>Used <b>Claude Code, Cursor and Windsurf</b> to speed up feature work, debugging and refactoring of legacy code.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <div class="job-head"><div><h3>Senior PHP Developer</h3><div class="co">Raindrops Infotech · Ahmedabad</div></div><div class="when">Sep 2021 – Jul 2025</div></div>
+        <ul>
+          <li>Delivered <b>15+ client projects</b> on Laravel, Core PHP, Magento 2 and WordPress with a <b>95% on-time delivery rate</b>.</li>
+          <li>Built REST APIs and integrated <b>payment gateways</b> and third-party services across multiple platforms.</li>
+          <li>Built React.js and jQuery/AJAX front-end features, including real-time interactions that <b>lifted user engagement by 30%</b>.</li>
+          <li>Cut SQL query times by <b>up to 60%</b> on legacy systems by rewriting queries and adding indexes.</li>
+          <li>Created admin dashboards and reusable backend modules with Eloquent models and Laravel queues/jobs, speeding up delivery on later projects.</li>
+          <li>Customized WordPress themes and plugins and fixed responsive layouts, working directly with clients to define requirements.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <div class="job-head"><div><h3>PHP Developer Intern</h3><div class="co">Adroit IT · Ahmedabad</div></div><div class="when">May 2019 – Jan 2020</div></div>
+        <ul>
+          <li>Built backend logic and front-end integration for <b>3 live PHP projects</b>.</li>
+          <li>Assisted with MySQL database design for applications serving <b>500+ users</b> and deployed to production via FTP/SSH with a <b>100% success rate</b>.</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="padding-top:0">
+  <div class="container">
+    <span class="eyebrow">// projects</span>
+    <h2 class="title">Selected work</h2>
+    <p class="sub">15+ live client sites across Laravel, WordPress, Magento 2 and Core PHP. Click any card to see my full contribution, tech stack and project details.</p>
+
+    <div class="filters" role="tablist" aria-label="Filter projects">
+      <button class="filter active" data-filter="all">All (15)</button>
+      <button class="filter" data-filter="laravel">Laravel (3)</button>
+      <button class="filter" data-filter="wordpress">WordPress (7)</button>
+      <button class="filter" data-filter="magento">Magento 2 (2)</button>
+      <button class="filter" data-filter="php">Core PHP (3)</button>
+    </div>
+
+    <div class="proj-grid" id="projGrid">
+      <!-- Laravel -->
+      <a class="proj reveal" data-cat="laravel" data-project="bookink" style="--c:#f97362" href="#">
+        <div class="proj-top"><span class="cat">Laravel</span><span class="arrow">↗</span></div>
+        <h3>bookink.uk</h3>
+        <p>Flutter mobile app with Laravel admin, store and artist panels. Complete backend and API development.</p>
+        <span class="host">bookink.uk</span>
+      </a>
+      <a class="proj reveal" data-cat="laravel" data-project="learncan" style="--c:#f97362" href="#">
+        <div class="proj-top"><span class="cat">Laravel</span><span class="arrow">↗</span></div>
+        <h3>learncan.app</h3>
+        <p>Laravel + React.js e-learning platform with AI assessments, student/teacher panels and Pusher live results.</p>
+        <span class="host">learncan.app</span>
+      </a>
+      <a class="proj reveal" data-cat="laravel" data-project="drmalpani" style="--c:#f97362" href="#">
+        <div class="proj-top"><span class="cat">Laravel</span><span class="arrow">↗</span></div>
+        <h3>drmalpani.com</h3>
+        <p>React.js frontend + Laravel backend. Full API integration and OpenAI-powered patent–doctor chat.</p>
+        <span class="host">drmalpani.com</span>
+      </a>
+      <!-- WordPress -->
+      <a class="proj reveal" data-cat="wordpress" data-project="jasdiamonds" style="--c:#38bdf8" href="#">
+        <div class="proj-top"><span class="cat">WordPress</span><span class="arrow">↗</span></div>
+        <h3>jasdiamonds.com</h3>
+        <p>WordPress site with customized theme, plugins, responsive layouts and performance optimization.</p>
+        <span class="host">jasdiamonds.com</span>
+      </a>
+      <a class="proj reveal" data-cat="wordpress" data-project="hotelbrimer" style="--c:#38bdf8" href="#">
+        <div class="proj-top"><span class="cat">WordPress</span><span class="arrow">↗</span></div>
+        <h3>hotel-brimer.lu</h3>
+        <p>Hotel website in WordPress tailored to client requirements with custom booking enquiry forms.</p>
+        <span class="host">hotel-brimer.lu</span>
+      </a>
+      <a class="proj reveal" data-cat="wordpress" data-project="tuinconcept" style="--c:#38bdf8" href="#">
+        <div class="proj-top"><span class="cat">WordPress</span><span class="arrow">↗</span></div>
+        <h3>tuinconcept-mertens.be</h3>
+        <p>WordPress business site with custom theme work, responsive fixes and PHP version update.</p>
+        <span class="host">tuinconcept-mertens.be</span>
+      </a>
+      <a class="proj reveal" data-cat="wordpress" data-project="salons" style="--c:#38bdf8" href="#">
+        <div class="proj-top"><span class="cat">WordPress</span><span class="arrow">↗</span></div>
+        <h3>salonsderomree.be</h3>
+        <p>WordPress site built and customized directly with the client, including booking and contact features.</p>
+        <span class="host">salonsderomree.be</span>
+      </a>
+      <a class="proj reveal" data-cat="wordpress" data-project="mhreklam" style="--c:#38bdf8" href="#">
+        <div class="proj-top"><span class="cat">WordPress</span><span class="arrow">↗</span></div>
+        <h3>mhreklam.se/student</h3>
+        <p>WordPress custom plugin with canvas-based student cards, plus cart, checkout and order customization.</p>
+        <span class="host">mhreklam.se/student</span>
+      </a>
+      <a class="proj reveal" data-cat="wordpress" data-project="tallman" style="--c:#38bdf8" href="#">
+        <div class="proj-top"><span class="cat">WordPress</span><span class="arrow">↗</span></div>
+        <h3>tallman.promo</h3>
+        <p>WordPress promotional site with theme and plugin customization, optimized for conversions.</p>
+        <span class="host">tallman.promo</span>
+      </a>
+      <a class="proj reveal" data-cat="wordpress" data-project="andaman" style="--c:#38bdf8" href="#">
+        <div class="proj-top"><span class="cat">WordPress</span><span class="arrow">↗</span></div>
+        <h3>andamanferryticket.com</h3>
+        <p>WordPress ferry ticket booking site with integrated ferry company APIs and seat selection.</p>
+        <span class="host">andamanferryticket.com</span>
+      </a>
+      <!-- Magento -->
+      <a class="proj reveal" data-cat="magento" data-project="recambio" style="--c:#fb923c" href="#">
+        <div class="proj-top"><span class="cat">Magento 2</span><span class="arrow">↗</span></div>
+        <h3>recambioreciclado.com</h3>
+        <p>Magento 2 e-commerce store with catalog management, checkout customization and integrations.</p>
+        <span class="host">recambioreciclado.com</span>
+      </a>
+      <a class="proj reveal" data-cat="magento" data-project="getvitamine" style="--c:#fb923c" href="#">
+        <div class="proj-top"><span class="cat">Magento 2</span><span class="arrow">↗</span></div>
+        <h3>getvitamine.com</h3>
+        <p>Magento 2 online store with payment gateway integration, shipping setup and service connections.</p>
+        <span class="host">getvitamine.com</span>
+      </a>
+      <!-- Core PHP -->
+      <a class="proj reveal" data-cat="php" data-project="actowiz" style="--c:#818cf8" href="#">
+        <div class="proj-top"><span class="cat">Core PHP</span><span class="arrow">↗</span></div>
+        <h3>actowizsolutions.com</h3>
+        <p>Core PHP company website, deployed and maintained on Linux production servers.</p>
+        <span class="host">actowizsolutions.com</span>
+      </a>
+      <a class="proj reveal" data-cat="php" data-project="fooddata" style="--c:#818cf8" href="#">
+        <div class="proj-top"><span class="cat">Core PHP</span><span class="arrow">↗</span></div>
+        <h3>fooddatascrape.com</h3>
+        <p>Core PHP site for a food data scraping service, built and supported in production.</p>
+        <span class="host">fooddatascrape.com</span>
+      </a>
+      <a class="proj reveal" data-cat="php" data-project="realdata" style="--c:#818cf8" href="#">
+        <div class="proj-top"><span class="cat">Core PHP</span><span class="arrow">↗</span></div>
+        <h3>realdataapi.com</h3>
+        <p>Core PHP data-scraping API platform, built and maintained in production.</p>
+        <span class="host">realdataapi.com</span>
+      </a>
+      <a class="proj reveal" data-cat="php" data-project="iwebdata" style="--c:#818cf8" href="#">
+        <div class="proj-top"><span class="cat">Core PHP</span><span class="arrow">↗</span></div>
+        <h3>iwebdatascraping.com</h3>
+        <p>Core PHP data-scraping service site, built and supported in production.</p>
+        <span class="host">iwebdatascraping.com</span>
+      </a>
+      <a class="proj reveal" data-cat="php" data-project="productdata" style="--c:#818cf8" href="#">
+        <div class="proj-top"><span class="cat">Core PHP</span><span class="arrow">↗</span></div>
+        <h3>productdatascrape.com</h3>
+        <p>Core PHP product data-scraping platform, built and maintained in production.</p>
+        <span class="host">productdatascrape.com</span>
+      </a>
+    </div>
+    <p class="note">Project descriptions summarize my role and the stack used. Sites are client-owned and may change over time.</p>
+  </div>
+</section>
+
+<!-- ============ PROJECT MODAL ============ -->
+<div class="modal-overlay" id="projectModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close project details">&times;</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   PROJECT DATA — edit this object to update project details.
+   Set url: null to hide the live link (discontinued projects).
+   ============================================================ */
+const projectData = {
+  /* ---------- LARAVEL ---------- */
+  bookink: {
+    title: "bookink.uk",
+    category: "Laravel · Flutter · Stripe",
+    url: "https://bookink.uk",
+    summary: "A booking platform with a Flutter mobile app and a Laravel backend powering three separate panels: admin, store and artist.",
+    roles: [
+      "Built the complete Laravel backend from scratch — database schema, models, controllers and business logic.",
+      "Developed all REST APIs consumed by the Flutter mobile application (authentication, bookings, artist profiles, store catalog).",
+      "Created three distinct panels (admin, store, artist) with role-based access control.",
+      "Integrated Stripe for recurring subscription payments, including webhook handling and payment lifecycle management."
+    ],
+    stack: ["Laravel", "PHP", "MySQL", "REST API", "Flutter API", "Stripe Recurring", "Eloquent", "Queues/Jobs"],
+    highlight: "Full end-to-end ownership: Laravel backend + all Flutter-facing APIs + Stripe recurring billing."
+  },
+  learncan: {
+    title: "learncan.app",
+    category: "Laravel · React.js · OpenAI · Pusher",
+    url: null,
+    status: "Discontinued project",
+    summary: "An e-learning platform with separate teacher and student panels, AI-powered assessments, and live result updates via Pusher. Frontend in React.js, backend in Laravel.",
+    roles: [
+      "Built the Laravel backend — database design, models, controllers and business logic.",
+      "Developed REST APIs consumed by the React.js frontend for both teacher and student panels.",
+      "Integrated the OpenAI API to power AI-generated assessments and question generation.",
+      "Implemented a 'retry with less difficulty' flow so students can reattempt assessments at an easier level based on performance.",
+      "Integrated Pusher for real-time live result updates across student and teacher panels.",
+      "Built role-based access separating teacher and student capabilities."
+    ],
+    stack: ["Laravel", "PHP", "React.js", "REST API", "OpenAI API", "Pusher", "MySQL", "RBAC"],
+    highlight: "AI-generated assessments with adaptive 'retry with less difficulty' logic and Pusher-powered live results."
+  },
+  drmalpani: {
+    title: "drmalpani.com",
+    category: "Laravel · React.js · OpenAI",
+    url: "https://drmalpani.com",
+    summary: "A medical platform combining a React.js frontend with a Laravel backend, enhanced by an OpenAI-powered chat system for patients and doctors.",
+    roles: [
+      "Built the full Laravel backend — database design, models, controllers and API layer.",
+      "Developed all REST APIs consumed by the React.js frontend and handled complete frontend API integration.",
+      "Implemented the OpenAI API for a patent–doctor chat feature.",
+      "Built conversation summarization logic so previous chat history is condensed and explained to the doctor before a consultation.",
+      "Handled authentication, role separation (patient vs. doctor) and secure data flow between frontend, backend and OpenAI."
+    ],
+    stack: ["Laravel", "PHP", "React.js", "REST API", "OpenAI API", "MySQL", "API Integration"],
+    highlight: "OpenAI-powered chat with conversation summarization — built both the Laravel APIs and the React.js integration."
+  },
+
+  /* ---------- WORDPRESS ---------- */
+  jasdiamonds: {
+    title: "jasdiamonds.com",
+    category: "WordPress",
+    url: "https://jasdiamonds.com",
+    summary: "A diamond/jewellery WordPress site with a custom theme, plugin customization and responsive layout work.",
+    roles: [
+      "Customized the WordPress theme to match the brand and client requirements.",
+      "Configured and customized plugins for product display and content management.",
+      "Fixed responsive layouts across mobile, tablet and desktop breakpoints.",
+      "Optimized site performance and loading speed."
+    ],
+    stack: ["WordPress", "PHP", "Custom Theme", "Plugin Customization", "Responsive Design", "Performance"],
+    highlight: "Custom WordPress theme work with plugin customization and responsive layout fixes."
+  },
+  hotelbrimer: {
+    title: "hotel-brimer.lu",
+    category: "WordPress · Freelance",
+    url: "https://hotel-brimer.lu/en",
+    summary: "A hotel website built in WordPress, delivered as a freelance project, with custom booking enquiry functionality.",
+    roles: [
+      "Built and customized the WordPress theme for the hotel's brand.",
+      "Implemented custom booking enquiry forms and contact features.",
+      "Diagnosed and fixed existing errors to bring the site back to full working order.",
+      "Updated the PHP version and ensured compatibility with themes and plugins.",
+      "Ensured responsive design and cross-browser compatibility."
+    ],
+    stack: ["WordPress", "PHP", "Custom Theme", "Forms", "Responsive Design", "Error Fixing", "PHP Update"],
+    highlight: "Freelance rescue project — fixed errors, updated PHP version, and brought the site back to full working order."
+  },
+  tuinconcept: {
+    title: "tuinconcept-mertens.be",
+    category: "WordPress · Freelance",
+    url: "https://tuinconcept-mertens.be",
+    summary: "A WordPress business site for a garden/landscaping company, delivered as a freelance project with error resolution and a PHP version update.",
+    roles: [
+      "Diagnosed and fixed existing errors on the live site.",
+      "Updated the PHP version and resolved compatibility issues with the theme and plugins.",
+      "Customized the WordPress theme and responsive layouts.",
+      "Delivered the site back to production in full working order."
+    ],
+    stack: ["WordPress", "PHP", "Custom Theme", "Responsive Design", "Error Fixing", "PHP Update"],
+    highlight: "Freelance rescue — fixed errors and completed a PHP version update to restore full functionality."
+  },
+  salons: {
+    title: "salonsderomree.be",
+    category: "WordPress · Freelance",
+    url: "https://salonsderomree.be",
+    summary: "A WordPress site built and customized as a freelance project, with booking and contact features and error resolution.",
+    roles: [
+      "Worked directly with the client to define requirements and structure.",
+      "Built and customized the WordPress theme.",
+      "Implemented booking and contact features.",
+      "Diagnosed and fixed existing errors and updated the PHP version.",
+      "Provided responsive design and production support."
+    ],
+    stack: ["WordPress", "PHP", "Custom Theme", "Booking", "Responsive Design", "Error Fixing", "PHP Update"],
+    highlight: "Freelance project — custom WordPress build with booking, error fixing and PHP version update."
+  },
+  mhreklam: {
+    title: "mhreklam.se/student",
+    category: "WordPress",
+    url: "https://mhreklam.se/student",
+    summary: "A WordPress section for an advertising agency's student page, featuring a custom canvas-based student card plugin and e-commerce customization.",
+    roles: [
+      "Created a custom WordPress plugin that generates student cards using HTML5 Canvas and JavaScript.",
+      "Customized the cart, checkout and order flow to meet the client's requirements.",
+      "Ensured responsive design across devices and set up content management."
+    ],
+    stack: ["WordPress", "PHP", "Custom Plugin", "HTML5 Canvas", "JavaScript", "WooCommerce", "Cart/Checkout", "Responsive Design"],
+    highlight: "Custom canvas + JS plugin for student card generation, plus full cart, checkout and order customization."
+  },
+  tallman: {
+    title: "tallman.promo",
+    category: "WordPress",
+    url: "https://tallman.promo",
+    summary: "A WordPress promotional site with theme and plugin customization, optimized for conversions.",
+    roles: [
+      "Customized the WordPress theme for the promotional site.",
+      "Configured and customized plugins.",
+      "Optimized layouts for conversion and performance."
+    ],
+    stack: ["WordPress", "PHP", "Theme Customization", "Plugin Customization", "Performance"],
+    highlight: "Conversion-optimized WordPress promotional site with theme and plugin work."
+  },
+  andaman: {
+    title: "andamanferryticket.com",
+    category: "WordPress · Freelance · API Integration",
+    url: "http://andamanferryticket.com",
+    summary: "A WordPress ferry ticket booking website delivered as a freelance project, integrating ferry company APIs and seat selection into the booking flow.",
+    roles: [
+      "Built the WordPress booking site end to end as a freelance project.",
+      "Integrated multiple ferry company APIs to fetch routes, schedules and availability.",
+      "Implemented seat selection within the booking flow.",
+      "Connected the booking process to the ferry operators' systems.",
+      "Ensured responsive design and production support."
+    ],
+    stack: ["WordPress", "PHP", "Custom Plugin", "Third-party APIs", "Booking Flow", "Seat Selection", "Responsive Design"],
+    highlight: "Freelance ferry booking site with multi-company API integration and interactive seat selection."
+  },
+
+  /* ---------- MAGENTO 2 ---------- */
+  recambio: {
+    title: "recambioreciclado.com",
+    category: "Magento 2",
+    url: "https://recambioreciclado.com",
+    summary: "A Magento 2 e-commerce store with catalog management, checkout customization and third-party integrations.",
+    roles: [
+      "Customized the Magento 2 catalog and product structure.",
+      "Worked on checkout flow customization and configuration.",
+      "Integrated third-party services and payment configuration."
+    ],
+    stack: ["Magento 2", "PHP", "MySQL", "E-commerce", "Checkout", "Integrations"],
+    highlight: "Magento 2 store with catalog, checkout and integration work."
+  },
+  getvitamine: {
+    title: "getvitamine.com",
+    category: "Magento 2",
+    url: "https://getvitamine.com",
+    summary: "A Magento 2 online store with payment gateway integration, shipping setup and third-party service connections.",
+    roles: [
+      "Configured and integrated payment gateways for the store.",
+      "Set up shipping and fulfillment options.",
+      "Connected third-party services to the Magento 2 platform."
+    ],
+    stack: ["Magento 2", "PHP", "Payment Gateway", "Shipping", "Integrations"],
+    highlight: "Magento 2 store with payment gateway and shipping integrations."
+  },
+
+  /* ---------- CORE PHP ---------- */
+  actowiz: {
+    title: "actowizsolutions.com",
+    category: "Core PHP",
+    url: "https://actowizsolutions.com",
+    summary: "A Core PHP company website, deployed and maintained on Linux production servers with SSL and DNS management.",
+    roles: [
+      "Built and maintained the Core PHP website.",
+      "Deployed to Linux production servers (Apache/Nginx/Plesk).",
+      "Managed SSL certificates and DNS configuration."
+    ],
+    stack: ["Core PHP", "MySQL", "Linux", "Apache/Nginx", "Plesk", "SSL/DNS"],
+    highlight: "Core PHP site with full Linux server deployment and maintenance."
+  },
+  fooddata: {
+    title: "fooddatascrape.com",
+    category: "Core PHP · Data Scraping",
+    url: "https://fooddatascrape.com",
+    summary: "A Core PHP data-scraping service site, built and supported in production with custom backend logic.",
+    roles: [
+      "Built the Core PHP backend with custom scraping-related logic.",
+      "Deployed and supported the site in production.",
+      "Handled server-side configuration and maintenance."
+    ],
+    stack: ["Core PHP", "MySQL", "Web Scraping Logic", "Linux", "Production Support"],
+    highlight: "Core PHP data-scraping site with custom backend logic and production support."
+  },
+  realdata: {
+    title: "realdataapi.com",
+    category: "Core PHP · Data Scraping",
+    url: "https://www.realdataapi.com/",
+    summary: "A Core PHP data-scraping API platform providing structured data access, built and maintained in production.",
+    roles: [
+      "Built the Core PHP backend with custom data-scraping and API logic.",
+      "Developed API endpoints for structured data delivery.",
+      "Deployed and maintained the platform on Linux production servers."
+    ],
+    stack: ["Core PHP", "MySQL", "Web Scraping", "REST API", "Linux", "Production Support"],
+    highlight: "Core PHP data-scraping API platform built and maintained in production."
+  },
+  iwebdata: {
+    title: "iwebdatascraping.com",
+    category: "Core PHP · Data Scraping",
+    url: "https://www.iwebdatascraping.com/",
+    summary: "A Core PHP data-scraping service website, built and supported in production.",
+    roles: [
+      "Built the Core PHP backend and service pages.",
+      "Implemented data-scraping logic and API endpoints.",
+      "Deployed and maintained the site on Linux production servers."
+    ],
+    stack: ["Core PHP", "MySQL", "Web Scraping", "REST API", "Linux", "Production Support"],
+    highlight: "Core PHP data-scraping service site with scraping logic and API endpoints."
+  },
+  productdata: {
+    title: "productdatascrape.com",
+    category: "Core PHP · Data Scraping",
+    url: "https://www.productdatascrape.com/",
+    summary: "A Core PHP product data-scraping platform, built and maintained in production.",
+    roles: [
+      "Built the Core PHP backend with product data-scraping logic.",
+      "Developed API endpoints and data delivery features.",
+      "Deployed and maintained the platform on Linux production servers."
+    ],
+    stack: ["Core PHP", "MySQL", "Web Scraping", "REST API", "Linux", "Production Support"],
+    highlight: "Core PHP product data-scraping platform built and maintained in production."
+  }
+};
+
+/* ============================================================
+   PROJECT MODAL — open on card click
+   ============================================================ */
+(function() {
+  const modal = document.getElementById('projectModal');
+  const modalBody = document.getElementById('modalBody');
+  const modalClose = document.getElementById('modalClose');
+  let lastFocused = null;
+
+  function buildModalContent(data) {
+    const rolesHtml = data.roles.map(r => `<li>${r}</li>`).join('');
+    const stackHtml = data.stack.map(s => `<span class="tag">${s}</span>`).join('');
+    const linkHtml = data.url
+      ? `<a class="modal-live-link" href="${data.url}" target="_blank" rel="noopener">
+           Visit live site ↗ <span style="opacity:.6">${data.url.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'')}</span>
+         </a>`
+      : `<div class="modal-live-link" style="opacity:.7;">
+           ⏸ ${data.status || 'Currently unavailable'}
+         </div>`;
+    return `
+      <span class="modal-eyebrow">${data.category}</span>
+      <h2 id="modalTitle">${data.title}</h2>
+      ${linkHtml}
+      <div class="modal-section">
+        <h4>Overview</h4>
+        <p>${data.summary}</p>
+      </div>
+      <div class="modal-section">
+        <h4>My Contribution</h4>
+        <ul class="modal-roles">${rolesHtml}</ul>
+      </div>
+      <div class="modal-section">
+        <h4>Tech Stack</h4>
+        <div class="modal-stack">${stackHtml}</div>
+      </div>
+      <div class="modal-highlight">
+        <strong style="color:var(--accent);font-weight:600;">Highlight:</strong> ${data.highlight}
+      </div>
+    `;
+  }
+
+  function openModal(projectKey) {
+    const data = projectData[projectKey];
+    if (!data) return;
+    modalBody.innerHTML = buildModalContent(data);
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lastFocused = document.activeElement;
+    modalClose.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  document.querySelectorAll('.proj[data-project]').forEach(card => {
+    card.addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal(this.dataset.project);
+    });
+  });
+
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+})();
+
+/* ============================================================
+   EXISTING SITE BEHAVIOR (nav, reveal, counters, filters, form)
+   ============================================================ */
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var burger = document.getElementById('burger'), links = document.getElementById('links');
+  burger.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ links.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+  });
+
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.12});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else { reveals.forEach(function(el){ el.classList.add('in'); }); }
+
+  var counters = document.querySelectorAll('[data-count]');
+  function runCount(el){
+    var target = +el.dataset.count, suffix = el.dataset.suffix || '', t0 = null, dur = 1200;
+    function tick(ts){
+      if(!t0) t0 = ts;
+      var p = Math.min((ts - t0)/dur, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1-p, 3))) + suffix;
+      if(p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  if('IntersectionObserver' in window){
+    var co = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ runCount(en.target); co.unobserve(en.target); } });
+    }, {threshold:.6});
+    counters.forEach(function(c){ co.observe(c); });
+  } else { counters.forEach(function(c){ c.textContent = c.dataset.count + (c.dataset.suffix||''); }); }
+
+  var filters = document.querySelectorAll('.filter'), projs = document.querySelectorAll('.proj');
+  filters.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filters.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.dataset.filter;
+      projs.forEach(function(p){
+        p.classList.toggle('hide', !(f === 'all' || p.dataset.cat === f));
+      });
+    });
+  });
+
+  var form = document.getElementById('contactForm'), msg = document.getElementById('formMsg'), sendBtn = document.getElementById('sendBtn');
+  form.addEventListener('submit', function(e){
+    if(form.action.indexOf('YOUR_FORM_ID') !== -1){
+      e.preventDefault();
+      msg.className = 'form-msg err';
+      msg.textContent = 'Form not configured yet. Please email me directly at sundranihasnain@gmail.com.';
+      return;
+    }
+    e.preventDefault();
+    sendBtn.disabled = true; sendBtn.textContent = 'Sending...';
+    fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){ msg.className='form-msg ok'; msg.textContent='Thanks! Your message has been sent.'; form.reset(); }
+        else { throw new Error(); }
+      })
+      .catch(function(){ msg.className='form-msg err'; msg.textContent='Something went wrong. Please email me directly instead.'; })
+      .finally(function(){ sendBtn.disabled=false; sendBtn.textContent='Send message'; });
+  });
+})();
+</script>
+
+<section id="education" style="padding-top:0">
+  <div class="container">
+    <span class="eyebrow">// education</span>
+    <h2 class="title">Education</h2>
+    <div class="edu-grid">
+      <div class="edu reveal"><div class="ic">🎓</div><div class="deg">Master of Computer Applications (MCA)</div><div class="uni">Gujarat Technical University, Ahmedabad</div></div>
+      <div class="edu reveal"><div class="ic">🎓</div><div class="deg">Bachelor of Computer Applications (BCA)</div><div class="uni">Gujarat University, Ahmedabad</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <span class="eyebrow">// contact</span>
+    <h2 class="title">Let's work together</h2>
+    <p class="sub">I'm an immediate joiner, open to full-time, contract and remote roles in Ahmedabad, Mumbai, Pune or anywhere remote.</p>
+    <div class="contact-grid">
+      <div class="c-list reveal">
+        <a class="c-item" href="mailto:sundranihasnain@gmail.com"><span class="ci">✉️</span><span><small>Email</small>sundranihasnain@gmail.com</span></a>
+        <a class="c-item" href="tel:+918511037701"><span class="ci">📞</span><span><small>Phone</small>+91 85110 37701</span></a>
+        <a class="c-item" href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank" rel="noopener"><span class="ci">💼</span><span><small>LinkedIn</small>Connect with me</span></a>
+        <a class="c-item" href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noopener"><span class="ci">🐙</span><span><small>GitHub</small>See my code</span></a>
+        <a class="c-item" href="resume.pdf" download><span class="ci">📄</span><span><small>Resume</small>Download PDF</span></a>
+      </div>
+
+      <!-- Replace YOUR_FORM_ID with your Formspree form ID (https://formspree.io) -->
+      <form id="contactForm" class="reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn primary" type="submit" id="sendBtn">Send message</button>
+        <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© <span id="yr"></span> Hasnain Raza Sundrani · Built with HTML, CSS &amp; JavaScript · Ahmedabad, India</div>
+</footer>
+
+<script>
+(function(){
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // mobile nav
+  var burger = document.getElementById('burger'), links = document.getElementById('links');
+  burger.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ links.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+  });
+
+  // scroll reveal
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.12});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else { reveals.forEach(function(el){ el.classList.add('in'); }); }
+
+  // count-up stats
+  var counters = document.querySelectorAll('[data-count]');
+  function runCount(el){
+    var target = +el.dataset.count, suffix = el.dataset.suffix || '', t0 = null, dur = 1200;
+    function tick(ts){
+      if(!t0) t0 = ts;
+      var p = Math.min((ts - t0)/dur, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1-p, 3))) + suffix;
+      if(p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  if('IntersectionObserver' in window){
+    var co = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ runCount(en.target); co.unobserve(en.target); } });
+    }, {threshold:.6});
+    counters.forEach(function(c){ co.observe(c); });
+  } else { counters.forEach(function(c){ c.textContent = c.dataset.count + (c.dataset.suffix||''); }); }
+
+  // project filters
+  var filters = document.querySelectorAll('.filter'), projs = document.querySelectorAll('.proj');
+  filters.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filters.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.dataset.filter;
+      projs.forEach(function(p){
+        p.classList.toggle('hide', !(f === 'all' || p.dataset.cat === f));
+      });
+    });
+  });
+
+  // contact form (Formspree, AJAX)
+  var form = document.getElementById('contactForm'), msg = document.getElementById('formMsg'), sendBtn = document.getElementById('sendBtn');
+  form.addEventListener('submit', function(e){
+    if(form.action.indexOf('YOUR_FORM_ID') !== -1){
+      e.preventDefault();
+      msg.className = 'form-msg err';
+      msg.textContent = 'Form not configured yet. Please email me directly at sundranihasnain@gmail.com.';
+      return;
+    }
+    e.preventDefault();
+    sendBtn.disabled = true; sendBtn.textContent = 'Sending...';
+    fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){ msg.className='form-msg ok'; msg.textContent='Thanks! Your message has been sent.'; form.reset(); }
+        else { throw new Error(); }
+      })
+      .catch(function(){ msg.className='form-msg err'; msg.textContent='Something went wrong. Please email me directly instead.'; })
+      .finally(function(){ sendBtn.disabled=false; sendBtn.textContent='Send message'; });
+  });
+})();
+</script>
+</body>
+</html>
